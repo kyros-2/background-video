@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+
+body{
+    height: 100vh;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+    border: 5px solid rgb(255, 255, 255);
+}
+
+.back{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.back::before{
+    content: '';
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%,rgba(0, 0, 0, 0.452) 80%, rgb(0, 0, 0) 100%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    bottom: 0;
+}
+
+.video{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+
+nav{
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+
+nav .logo{
+    color: rgb(255, 255, 255);
+    font-size: 23px;
+}
+
+nav .nav-item{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+nav .nav-item li{
+    list-style: none;
+}
+
+.nav-item li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    transition: 0.3s;
+}
+.nav-item li a:hover{
+    opacity: .7;
+}
+
+div.info{
+    height: calc(100% - 60px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: aliceblue;
+}
+
+div.info p{
+    width: calc(400px + 5vw);
+}
+
+.page-2{
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+}
